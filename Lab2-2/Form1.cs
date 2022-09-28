@@ -15,6 +15,15 @@ namespace Lab2_2
         public Form1()
         {
             InitializeComponent();
+            labelResult.Text = Properties.Settings.Default.result.ToString();
+            InputField.Text = Properties.Settings.Default.expression.ToString();
+            InputField.SelectionStart = InputField.Text.Length;
+        }
+        private void Save()
+        {
+            Properties.Settings.Default.result = labelResult.Text;
+            Properties.Settings.Default.expression = InputField.Text;
+            Properties.Settings.Default.Save();
         }
         private void Calculate()
         {
@@ -56,14 +65,6 @@ namespace Lab2_2
             res += num * minus;
             labelResult.Text = res.ToString();
         }
-        private void EnterCheck(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                Calculate();
-            }
-        }
-
         private void InputCheck(object sender, EventArgs e)
         {
             int length = InputField.Text.Length;
@@ -93,6 +94,7 @@ namespace Lab2_2
             {
                 labelResult.Text = "0";
             }
+            Save();
         }
 
         private void CleanField(object sender, EventArgs e)
@@ -100,6 +102,7 @@ namespace Lab2_2
             InputField.Text = "";
             labelResult.Text = "0";
             InputField.Focus();
+            Save();
         }
 
         private void buttonRes_Click(object sender, EventArgs e)

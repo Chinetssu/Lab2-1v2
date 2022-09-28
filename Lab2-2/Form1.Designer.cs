@@ -44,7 +44,6 @@ namespace Lab2_2
             this.InputField.Size = new System.Drawing.Size(268, 27);
             this.InputField.TabIndex = 0;
             this.InputField.TextChanged += new System.EventHandler(this.InputCheck);
-            this.InputField.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EnterCheck);
             // 
             // label1
             // 
