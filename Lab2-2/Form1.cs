@@ -101,5 +101,10 @@ namespace Lab2_2
             labelResult.Text = "0";
             InputField.Focus();
         }
+
+        private void buttonRes_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Результат равен: "+ labelResult.Text);
+        }
     }
 }

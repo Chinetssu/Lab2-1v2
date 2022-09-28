@@ -34,6 +34,7 @@ namespace Lab2_2
             this.cleanButton = new System.Windows.Forms.Button();
             this.labelResult = new System.Windows.Forms.Label();
             this.labelResSign = new System.Windows.Forms.Label();
+            this.buttonRes = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // InputField
@@ -82,11 +83,22 @@ namespace Lab2_2
             this.labelResSign.TabIndex = 5;
             this.labelResSign.Text = "=";
             // 
+            // buttonRes
+            // 
+            this.buttonRes.Location = new System.Drawing.Point(334, 56);
+            this.buttonRes.Name = "buttonRes";
+            this.buttonRes.Size = new System.Drawing.Size(102, 29);
+            this.buttonRes.TabIndex = 6;
+            this.buttonRes.Text = "Результат";
+            this.buttonRes.UseVisualStyleBackColor = true;
+            this.buttonRes.Click += new System.EventHandler(this.buttonRes_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(448, 86);
+            this.ClientSize = new System.Drawing.Size(447, 93);
+            this.Controls.Add(this.buttonRes);
             this.Controls.Add(this.labelResSign);
             this.Controls.Add(this.labelResult);
             this.Controls.Add(this.cleanButton);
@@ -107,6 +119,7 @@ namespace Lab2_2
         private System.Windows.Forms.Button cleanButton;
         private System.Windows.Forms.Label labelResult;
         private System.Windows.Forms.Label labelResSign;
+        private System.Windows.Forms.Button buttonRes;
     }
 }
 
