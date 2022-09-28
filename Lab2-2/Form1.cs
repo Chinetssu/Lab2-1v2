@@ -22,9 +22,15 @@ namespace Lab2_2
             {
                 InputField.Text = InputField.Text[1..];
             }
-            if (InputField.Text[InputField.Text.Length-1] == '+' || InputField.Text[^1] == '-')
+            if (InputField.Text.Length > 1)
             {
-                InputField.Text = InputField.Text[] ;
+                if ((InputField.Text[InputField.Text.Length - 1] == '+' || InputField.Text[InputField.Text.Length - 1] == '-') && (InputField.Text[InputField.Text.Length - 2] == '+' || InputField.Text[InputField.Text.Length - 2] == '-'))
+                {
+                    char sign = InputField.Text[InputField.Text.Length - 1];
+                    InputField.Text = InputField.Text.TrimEnd('-', '+');
+                    InputField.Text += sign;
+                    InputField.SelectionStart = InputField.Text.Length;
+                }
             }
             int res = 0, num = 0, minus = 1;
             for (int i = 0; i < InputField.Text.Length; i++)
@@ -48,7 +54,7 @@ namespace Lab2_2
                 }
             }
             res += num * minus;
-            MessageBox.Show("Значение выражения= " + res);
+            labelResult.Text = res.ToString();
         }
         private void EnterCheck(object sender, KeyEventArgs e)
         {
@@ -80,14 +86,19 @@ namespace Lab2_2
                 }
                 else
                 {
-                    //Calculate();
+                    Calculate();
                 }
+            }
+            else
+            {
+                labelResult.Text = "0";
             }
         }
 
         private void CleanField(object sender, EventArgs e)
         {
             InputField.Text = "";
+            labelResult.Text = "0";
             InputField.Focus();
         }
     }

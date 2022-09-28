@@ -33,7 +33,7 @@ namespace Lab2_2
             this.label1 = new System.Windows.Forms.Label();
             this.cleanButton = new System.Windows.Forms.Button();
             this.labelResult = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelResSign = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // InputField
@@ -56,7 +56,7 @@ namespace Lab2_2
             // 
             // cleanButton
             // 
-            this.cleanButton.Location = new System.Drawing.Point(168, 42);
+            this.cleanButton.Location = new System.Drawing.Point(12, 45);
             this.cleanButton.Name = "cleanButton";
             this.cleanButton.Size = new System.Drawing.Size(165, 29);
             this.cleanButton.TabIndex = 2;
@@ -67,27 +67,27 @@ namespace Lab2_2
             // labelResult
             // 
             this.labelResult.AutoSize = true;
-            this.labelResult.Location = new System.Drawing.Point(389, 46);
+            this.labelResult.Location = new System.Drawing.Point(359, 33);
             this.labelResult.Name = "labelResult";
             this.labelResult.Size = new System.Drawing.Size(17, 20);
             this.labelResult.TabIndex = 4;
             this.labelResult.Text = "0";
             // 
-            // label2
+            // labelResSign
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(364, 46);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(19, 20);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "=";
+            this.labelResSign.AutoSize = true;
+            this.labelResSign.Location = new System.Drawing.Point(334, 33);
+            this.labelResSign.Name = "labelResSign";
+            this.labelResSign.Size = new System.Drawing.Size(19, 20);
+            this.labelResSign.TabIndex = 5;
+            this.labelResSign.Text = "=";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(448, 86);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelResSign);
             this.Controls.Add(this.labelResult);
             this.Controls.Add(this.cleanButton);
             this.Controls.Add(this.label1);
@@ -106,7 +106,7 @@ namespace Lab2_2
         private System.Windows.Forms.Button Clean;
         private System.Windows.Forms.Button cleanButton;
         private System.Windows.Forms.Label labelResult;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelResSign;
     }
 }
 
