@@ -24,7 +24,7 @@ namespace Lab2_2
             }
             if (InputField.Text[InputField.Text.Length-1] == '+' || InputField.Text[^1] == '-')
             {
-                InputField.Text = InputField.Text[0..^-1];
+                InputField.Text = InputField.Text[] ;
             }
             int res = 0, num = 0, minus = 1;
             for (int i = 0; i < InputField.Text.Length; i++)
@@ -77,6 +77,10 @@ namespace Lab2_2
                         MessageBox.Show("Введён недопустимый символ!");
                         InputField.SelectionStart = InputField.Text.Length;
                     }
+                }
+                else
+                {
+                    //Calculate();
                 }
             }
         }

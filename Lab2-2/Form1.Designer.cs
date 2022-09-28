@@ -32,17 +32,15 @@ namespace Lab2_2
             this.InputField = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cleanButton = new System.Windows.Forms.Button();
-            this.groupCalc = new System.Windows.Forms.GroupBox();
-            this.buttonCalcYeah = new System.Windows.Forms.Button();
-            this.buttonCalcNah = new System.Windows.Forms.Button();
-            this.groupCalc.SuspendLayout();
+            this.labelResult = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // InputField
             // 
             this.InputField.Location = new System.Drawing.Point(168, 5);
             this.InputField.Name = "InputField";
-            this.InputField.Size = new System.Drawing.Size(551, 27);
+            this.InputField.Size = new System.Drawing.Size(268, 27);
             this.InputField.TabIndex = 0;
             this.InputField.TextChanged += new System.EventHandler(this.InputCheck);
             this.InputField.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EnterCheck);
@@ -58,7 +56,7 @@ namespace Lab2_2
             // 
             // cleanButton
             // 
-            this.cleanButton.Location = new System.Drawing.Point(554, 38);
+            this.cleanButton.Location = new System.Drawing.Point(168, 42);
             this.cleanButton.Name = "cleanButton";
             this.cleanButton.Size = new System.Drawing.Size(165, 29);
             this.cleanButton.TabIndex = 2;
@@ -66,47 +64,36 @@ namespace Lab2_2
             this.cleanButton.UseVisualStyleBackColor = true;
             this.cleanButton.Click += new System.EventHandler(this.CleanField);
             // 
-            // groupCalc
+            // labelResult
             // 
-            this.groupCalc.Controls.Add(this.buttonCalcYeah);
-            this.groupCalc.Controls.Add(this.buttonCalcNah);
-            this.groupCalc.Location = new System.Drawing.Point(168, 149);
-            this.groupCalc.Name = "groupCalc";
-            this.groupCalc.Size = new System.Drawing.Size(414, 109);
-            this.groupCalc.TabIndex = 3;
-            this.groupCalc.TabStop = false;
-            this.groupCalc.Text = "Хотите отключить уведомления о некорректном вводе?";
+            this.labelResult.AutoSize = true;
+            this.labelResult.Location = new System.Drawing.Point(389, 46);
+            this.labelResult.Name = "labelResult";
+            this.labelResult.Size = new System.Drawing.Size(17, 20);
+            this.labelResult.TabIndex = 4;
+            this.labelResult.Text = "0";
             // 
-            // buttonCalcYeah
+            // label2
             // 
-            this.buttonCalcYeah.Location = new System.Drawing.Point(25, 60);
-            this.buttonCalcYeah.Name = "buttonCalcYeah";
-            this.buttonCalcYeah.Size = new System.Drawing.Size(93, 29);
-            this.buttonCalcYeah.TabIndex = 5;
-            this.buttonCalcYeah.Text = "Да";
-            this.buttonCalcYeah.UseVisualStyleBackColor = true;
-            // 
-            // buttonCalcNah
-            // 
-            this.buttonCalcNah.Location = new System.Drawing.Point(304, 60);
-            this.buttonCalcNah.Name = "buttonCalcNah";
-            this.buttonCalcNah.Size = new System.Drawing.Size(94, 29);
-            this.buttonCalcNah.TabIndex = 4;
-            this.buttonCalcNah.Text = "Нет";
-            this.buttonCalcNah.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(364, 46);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(19, 20);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "=";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(731, 410);
-            this.Controls.Add(this.groupCalc);
+            this.ClientSize = new System.Drawing.Size(448, 86);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelResult);
             this.Controls.Add(this.cleanButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.InputField);
             this.Name = "Form1";
             this.Text = "Вычисление выражения";
-            this.groupCalc.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,9 +105,8 @@ namespace Lab2_2
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Clean;
         private System.Windows.Forms.Button cleanButton;
-        private System.Windows.Forms.GroupBox groupCalc;
-        private System.Windows.Forms.Button buttonCalcYeah;
-        private System.Windows.Forms.Button buttonCalcNah;
+        private System.Windows.Forms.Label labelResult;
+        private System.Windows.Forms.Label label2;
     }
 }
 
